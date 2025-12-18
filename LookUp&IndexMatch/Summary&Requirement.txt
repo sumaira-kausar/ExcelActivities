@@ -1,0 +1,20 @@
+This activity is about using Excel functions (VLOOKUP and INDEX-MATCH) to analyze a dataset of stolen vehicles in New Zealand. Here’s a summary and clarification:
+
+Key Concepts:
+
+You have three datasets: Stolen Vehicles, Locations, and Make Details.
+Your goal is to combine information from these datasets using lookup functions.
+Main Functions:
+
+VLOOKUP: Finds a value in the first column of a table and returns a value from another column in the same row.
+Example: To find the region for a stolen vehicle, use the vehicle’s location_id to look up the region in the Location dataset.
+=VLOOKUP([location_id], LocationTable, 2, FALSE) returns the region name.
+INDEX-MATCH: More flexible than VLOOKUP. MATCH finds the row number, INDEX returns the value.
+Example: To find the description of a vehicle with vehicle_id 300:
+=INDEX([Vehicle_desc_column], MATCH(300, [Vehicle_id_column], 0))
+Typical Tasks:
+
+Use VLOOKUP to add region and country info to the stolen vehicle data.
+Use VLOOKUP to add make name and type.
+Use INDEX-MATCH to find details like vehicle description or most common stolen location for a type.
+In summary: You’re merging and analyzing data using lookup functions to answer questions about stolen vehicles. This is a common data analysis skill.
